@@ -6,7 +6,7 @@ export const Newtodo = ({ todo, setTodo, todoList, setTodoList }) => {
     if (todo === "") {
       alert("Please enter some value");
     } else {
-      const response=await axios("http://localhost:3006/api/todo", {
+      const response=await axios("https://todo-app-mern-phi.vercel.app/api/todo", {
         method:"POST", 
         
           data:{

@@ -12,7 +12,7 @@ function App() {
 
 
   const loadFunction=async()=>{
-    const res=await axios("http://localhost:3006/api/todo");
+    const res=await axios("https://todo-app-mern-phi.vercel.app/api/todo");
     // console.log(res.data);
     setTodoList(res.data);
     

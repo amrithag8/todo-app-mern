@@ -7,7 +7,7 @@ export const Todoitems = ({ item, todoList, setTodoList }) => {
   const [editValue, setEditValue] = useState();
 
   const deleteHandler = async(_id) => {
-    const res=await axios("http://localhost:3006/api/todo", {
+    const res=await axios("https://todo-app-mern-phi.vercel.app/api/todo", {
       method: "DELETE",
       data:{
         ids:_id
@@ -41,7 +41,7 @@ export const Todoitems = ({ item, todoList, setTodoList }) => {
     if (editValue === "") {
       alert("Please enter some value");
     } else {
-      const response=await axios("http://localhost:3006/api/todo", {
+      const response=await axios("https://todo-app-mern-phi.vercel.app/api/todo", {
         method: "PUT",
         data:{
           todo: editValue,

@@ -14,9 +14,9 @@ function App() {
     setTodoList(res.data);
   };
 
-  // useEffect(() => {
-  //   loadFunction();
-  // }, []);
+  useEffect(() => {
+    loadFunction();
+  }, []);
 
   return (
     <div className="App-main">

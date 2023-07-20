@@ -4,25 +4,19 @@ import { Newtodo } from "./Components/Newtodo/Newtodo";
 import { Todoitems } from "./Components/Todoitems/Todoitems";
 import axios from "axios";
 
-
-
 function App() {
   const [todo, setTodo] = useState("");
   const [todoList, setTodoList] = useState([]);
 
+  const loadFunction = async () => {
+    const res = await axios("https://todo-app-mern-phi.vercel.app/api/todo");
 
-  const loadFunction=async()=>{
-    const res=await axios("https://todo-app-mern-phi.vercel.app/api/todo");
-    // console.log(res.data);
     setTodoList(res.data);
-    
-    }
+  };
 
-    // console.log("todoList",todoList )
-    
-    useEffect(()=>{
-      loadFunction();
-    }, []);
+  // useEffect(() => {
+  //   loadFunction();
+  // }, []);
 
   return (
     <div className="App-main">
